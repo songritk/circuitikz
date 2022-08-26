@@ -105,7 +105,7 @@
 %% changes suggested by Jonathan P. Spratte
 %%
 \newbox\ctikz@scratchbox
-\pgfutil@protected\def\ctikzsubcircuitdef#1#2#3{%
+\pgfutil@protect\def\ctikzsubcircuitdef#1#2#3{%
     \expandafter\gdef\csname #1@Anchor\endcsname{}%
     \expandafter\gdef\csname #1@setanchors\endcsname{%
         \setbox\ctikz@scratchbox=\hbox{%
@@ -211,7 +211,7 @@
 % The other big restriction in this implementation is that lists can't contain a
 % \par (but \pgfutil@in@ doesn't support that anyway so there is not much
 % sense in supporting it here)
-\pgfutil@protected\def\pgf@circ@set@list#1#2%
+\pgfutil@protect\def\pgf@circ@set@list#1#2%
   {%
     % clear the error flag
     \let\pgf@circ@error@marker\pgf@circ@undefined
@@ -317,7 +317,7 @@
 
 % flag for special value
 \def\pgf@circ@all@flag{QallQ}
-\pgfutil@protected\def\pgf@circ@if@num@in@list#1#2%
+\pgfutil@protect\def\pgf@circ@if@num@in@list#1#2%
   {%
     % test whether the list macro is defined, if it isn't result is false
     \pgfutil@ifx\pgf@circ@undefined#1%
@@ -335,10 +335,10 @@
       }%
   }
 % next step is expanding the list macro
-\pgfutil@protected\def\pgf@circ@if@num@in@list@a#1#2%
+\pgfutil@protect\def\pgf@circ@if@num@in@list@a#1#2%
   {\expandafter\pgf@circ@if@num@in@list@b\expandafter{#2}{#1}}
 % now use \pgfutil@in@ to check whether there is the searched list element
-\pgfutil@protected\def\pgf@circ@if@num@in@list@b#1#2%
+\pgfutil@protect\def\pgf@circ@if@num@in@list@b#1#2%
   {%
     \begingroup
       % put the <marker> around the number to make sure only full matches are

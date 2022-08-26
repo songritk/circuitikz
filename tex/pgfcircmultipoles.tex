@@ -128,7 +128,7 @@
 % DIP (dual in line package) chips
 
 % helper macro to set the anchors inside a loop (to expand the current count)
-\pgfutil@protected\def\pgf@circ@make@dippin@anchor#1%
+\pgfutil@protect\def\pgf@circ@make@dippin@anchor#1%
   {%
     \expandafter\gdef\csname pgf@anchor@dipchip@pin #1\endcsname
       {%
@@ -361,7 +361,7 @@
 
 % QFP (quad flat package) chips
 % helper macro to set the anchors inside a loop (to expand the current count)
-\pgfutil@protected\def\pgf@circ@make@qfppin@anchor#1%
+\pgfutil@protect\def\pgf@circ@make@qfppin@anchor#1%
   {%
     \expandafter\gdef\csname pgf@anchor@qfpchip@pin #1\endcsname
       {%
@@ -1615,7 +1615,7 @@
 
 % helper macros to set the anchors inside a loop (to expand the current count)
 % left
-\pgfutil@protected\def\pgf@circ@make@muxdemux@L@anchor#1%
+\pgfutil@protect\def\pgf@circ@make@muxdemux@L@anchor#1%
   {%
     \expandafter\gdef\csname pgf@anchor@muxdemux@lpin #1\endcsname
       {%
@@ -1627,7 +1627,7 @@
       {\pgf@circ@muxdemux@L@anchor{#1}{0}}%
   }
 % right
-\pgfutil@protected\def\pgf@circ@make@muxdemux@R@anchor#1%
+\pgfutil@protect\def\pgf@circ@make@muxdemux@R@anchor#1%
   {%
     \expandafter\gdef\csname pgf@anchor@muxdemux@rpin #1\endcsname
       {%
@@ -1639,7 +1639,7 @@
       {\pgf@circ@muxdemux@R@anchor{#1}{0}}%
   }
 % bottom
-\pgfutil@protected\def\pgf@circ@make@muxdemux@B@anchor#1%
+\pgfutil@protect\def\pgf@circ@make@muxdemux@B@anchor#1%
   {%
     \expandafter\gdef\csname pgf@anchor@muxdemux@bpin #1\endcsname
       {%
@@ -1651,7 +1651,7 @@
       {\pgf@circ@muxdemux@B@anchor{#1}{0}}%
   }
 % top
-\pgfutil@protected\def\pgf@circ@make@muxdemux@T@anchor#1%
+\pgfutil@protect\def\pgf@circ@make@muxdemux@T@anchor#1%
   {%
     \expandafter\gdef\csname pgf@anchor@muxdemux@tpin #1\endcsname
       {%
